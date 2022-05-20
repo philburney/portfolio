@@ -1,0 +1,229 @@
+html {
+    font-size: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+        
+    }
+  
+
+nav {
+    /* position:fixed; */
+    width:100%;
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
+    background-color: blue;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    
+}
+
+
+nav ul {
+    justify-content: right;
+    list-style: none;
+    display: flex;
+    padding: 0.4rem 2rem;
+    align-items: flex-end;
+  
+    width:100%;
+}
+
+nav li {
+    padding: 0 1rem;
+   
+}
+
+nav a, nav p {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color:#ffec88;
+}
+
+
+
+#about {
+    width: 100%;
+    display: flex;
+ 
+
+}
+
+#abouttext {
+    display:inline;
+    width:100%;
+    background-color: blue;
+    color: white;
+    padding-bottom: 2rem;
+    margin-left: 5rem;
+    justify-self: center;
+    border-radius: 1rem;
+}
+
+h1{
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 4rem;
+    margin-left: 6rem;
+
+}
+
+#about h2 {
+    font-size: 2rem;
+    padding-top: 1rem;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 3rem;
+    padding-bottom: 1rem;
+}
+
+#about p{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1.1rem;
+    width: 80%;
+    
+}
+
+#about img {
+    width: 20%;
+    height: 20%;
+    object-fit: cover;
+    object-position: 100% 10%;
+    border: 5px solid blue;
+    border-radius: 50%;
+    position: relative;
+    right: 9.5rem;
+    background-color: blue;
+    align-self: center;
+
+}
+
+h3 {
+     font-family: 'Roboto', sans-serif;
+     font-size: 1.5rem;
+     margin-left: 3rem;
+     display: inline;
+     padding-right: 1rem;
+    
+}
+
+
+#leftarrow, #rightarrow {
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+    font-size:  20rem;
+    padding-right: 0rem;
+    font-weight: 800;
+    
+    
+}
+p#leftarrow, p#rightarrow {
+    font-size: 1.5rem;
+    padding-right: 0;
+    margin-left: 0;
+}
+
+#leftarrow p{
+    font-size: 10rem;
+    padding-right: 0rem;
+}
+
+p#leftarrow:hover, p#rightarrow:hover {
+    color: orange;
+    cursor: pointer;
+
+}
+
+
+#fact {
+    font-style: italic;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+
+
+/* styling for projects */
+#projects {  
+    display: grid;  
+    grid-gap: 5px;  
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, auto-fit);  
+    padding: 1rem 4rem; 
+}
+
+.projectCard{
+    margin: 0 1rem 0 1rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    box-shadow: .2rem .2rem lightgray;
+    border-radius: .4rem;
+
+}
+
+.projectCard h4 {
+    font-size:1.5rem;
+}
+
+.projectCard p {
+   display: inline;
+}
+
+     h2 {
+    font-size: 2rem;
+    padding-top: 1rem;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 5rem;
+    padding-bottom: 1rem;
+}
+
+#project1 {
+     background-color: lightblue;
+}
+#project2 {
+    background-color: lightgreen;
+
+}
+
+#project3 {
+    background-color: lightcyan;
+}
+
+
+/* Styling for skills */
+
+#skills ul{  
+    display: grid;  
+    grid-gap: 5px;  
+    grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+    grid-template-rows: repeat(1, 1rem);  
+    padding: 1rem 4rem; 
+    align-items: center;
+    justify-items: center;
+  
+}
+
+#skills li{
+list-style-type: none;
+}
+
+/*Footer Styling */
+
+footer {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2rem;
+}
+
