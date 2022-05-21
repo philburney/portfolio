@@ -1,3 +1,5 @@
+/*Global Styling */
+
 html {
     font-size: 16px;
 }
@@ -10,10 +12,12 @@ html {
     }
   
 
+/*Styling for Navbar*/
+
 nav {
-    /* position:fixed; */
+   
     width:100%;
-    display: flex;
+    display: flex;    /* Using flex */
     border: 2px solid black;
     justify-content: space-between;
     background-color: blue;
@@ -39,6 +43,8 @@ nav li {
    
 }
 
+
+/*Style nav fonts and links*/
 nav a, nav p {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -47,12 +53,15 @@ nav a, nav p {
     font-weight: bold;
 }
 
+
+/*change text to yellow on hover to emphasise links*/
+
 nav a:hover {
     color:#ffec88;
 }
 
 
-
+/*Styling for about section*/
 #about {
     width: 100%;
     display: flex;
@@ -71,6 +80,8 @@ nav a:hover {
     border-radius: 1rem;
 }
 
+
+/*Styling for my name */
 h1{
     font-size: 3rem;
     font-family: 'Dancing Script', cursive;
@@ -87,6 +98,8 @@ h1{
     padding-bottom: 1rem;
 }
 
+
+/*Styling for about text*/
 #about p{
     font-family: 'Roboto', sans-serif;
     margin-left: 3rem;
@@ -96,6 +109,8 @@ h1{
     
 }
 
+
+/*Styling for my headshot*/
 #about img {
     width: 20%;
     height: 20%;
@@ -110,6 +125,7 @@ h1{
 
 }
 
+/*Styling for fun fact heading*/
 h3 {
      font-family: 'Roboto', sans-serif;
      font-size: 1.5rem;
@@ -119,7 +135,7 @@ h3 {
     
 }
 
-
+/*Styling for arrows to scroll through facts */
 #leftarrow, #rightarrow {
     display: inline;
     font-family: 'Roboto', sans-serif;
@@ -146,7 +162,7 @@ p#leftarrow:hover, p#rightarrow:hover {
 
 }
 
-
+/*Styling of fact text */
 #fact {
     font-style: italic;
     text-align: center;
@@ -156,13 +172,14 @@ p#leftarrow:hover, p#rightarrow:hover {
 
 
 /* styling for projects */
-#projects {  
-    display: grid;  
+#projectList {  
+    display: grid;  /*Using grid*/
     grid-gap: 5px;  
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-template-rows: repeat(2, auto-fit);  
     padding: 1rem 4rem; 
 }
+
 
 .projectCard{
     margin: 0 1rem 0 1rem;
@@ -192,6 +209,7 @@ p#leftarrow:hover, p#rightarrow:hover {
 #project1 {
      background-color: lightblue;
 }
+
 #project2 {
     background-color: lightgreen;
 
@@ -205,10 +223,10 @@ p#leftarrow:hover, p#rightarrow:hover {
 /* Styling for skills */
 
 #skills ul{  
-    display: grid;  
+    display: grid;  /*Grid display*/
     grid-gap: 5px;  
     grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
-    grid-template-rows: repeat(1, 1rem);  
+  
     padding: 1rem 4rem; 
     align-items: center;
     justify-items: center;
@@ -226,4 +244,147 @@ footer {
     font-family: 'Roboto', sans-serif;
     margin-top: 2rem;
 }
+
+/*Default is to off as they are only used when screen size is too small*/
+#extraContact, #extraHome {
+    display: none;
+}
+
+
+
+
+
+/*Styling for Contact Page */
+
+#contactMe h1{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#contactMe{
+    font-family: 'Roboto', sans-serif;
+}
+
+#contactMe ul{
+    margin-left: 8rem;
+    list-style-type: none;
+
+}
+
+#contactMe img{
+    width: 6rem;
+    height: 6rem;
+    padding: 1rem 1rem;
+
+}
+
+
+
+#contactMe li{
+    height:6rem;
+    padding-bottom: 4rem;
+}
+.bullet {
+    position: relative;
+    bottom: 2.5rem;
+    font-size: 1.5rem;
+}
+title {
+    display: none;
+}
+
+
+
+/*Media changes */
+
+/*Move headshot right when display is shrunk to avoid overlapping text*/
+@media only screen and (max-width: 980px)  {
+    #about img  {
+  
+        right: 3.5rem;
+    }
+}
+
+
+/*Shrink name so fits on one line*/
+@media only screen and (max-width: 670px)  {
+    h1{
+        font-size: 2rem; 
+    }
+}
+
+
+
+/*reduce font on navbar */
+@media only screen and (max-width: 575px)  {
+    nav a, nav p  {
+  
+        font-size: 1rem;
+    }
+}
+
+/*remove headshot when display gets too low*/
+@media only screen and (max-width: 470px)  {
+    #about img  {
+  
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 425px)  {
+
+    /*remove navbar*/
+    nav a, nav p  {
+  
+       display: none;
+    }
+
+    /*Shrink name and lower margins*/
+    h1{
+    margin-left: 1rem;
+    font-size: 2rem; 
+    }
+
+    /*lower margin*/
+    #abouttext {
+        margin-left: 1rem;
+    
+    }
+
+
+    /*Change projects from grid to block*/
+    #projectList {  
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: block;
+    }
+
+    /*Allow skills to occupy 2 lines*/
+    #skills ul{  
+        grid-template-rows: repeat(2, auto-fit); 
+    }
+
+    /*lower margin*/
+    h2 {
+        margin-left: 1rem;
+
+    }
+    
+    /*add a little padding to icons */
+    #skills img{
+        padding-top: 1rem;
+    }
+
+    /*remove margin*/
+    #contactMe ul{
+        margin-left: 0;
+    }
+
+    /*add links to footer to account for the navbar being removed */
+    #extraContact, #extraHome {
+        display: inline;
+    }
+}
+
+
 
